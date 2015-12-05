@@ -27,7 +27,7 @@ class Item{
     }
 
     public function __toString(){
-        return $this->_key . "\n";
+        return $this->_key . " ";
     }
 }
 
@@ -41,7 +41,7 @@ class LinkedList{
             $this->_tail = $item;
         }else{
             $this->_tail->setNext($item);
-            $this->_tail = &$item;
+            $this->_tail = $item;
         }
     }
 

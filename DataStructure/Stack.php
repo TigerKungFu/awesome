@@ -62,7 +62,7 @@ class Stack{
             $output .= $item->getData() . " ";
             $item = $item->getNext();
         }
-        return $output;
+        return $output . "\n";
     }
 }
 ?>
