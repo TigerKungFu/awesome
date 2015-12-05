@@ -6,8 +6,8 @@
  * Time: 12:43 AM
  */
 class Item{
-    private $_key = '';
-    private $_next = null;
+    protected $_key = '';
+    protected $_next = null;
 
     public function __construct($key){
         $this->_key = $key;

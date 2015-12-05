@@ -23,7 +23,7 @@ class Item{
     public function setData($data){
         $this->_date = $data;
     }
-    public function getData($data){
+    public function getData(){
         return $this->_date;
     }
 }
