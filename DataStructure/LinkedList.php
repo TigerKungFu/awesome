@@ -13,10 +13,10 @@ class Item{
         $this->_key = $key;
     }
 
-    public function setNext(&$next){
+    public function setNext($next){
         $this->_next = $next;
     }
-    public function &getNext(){
+    public function getNext(){
         return $this->_next;
     }
     public function setKey($key){
@@ -35,12 +35,12 @@ class LinkedList{
     private $_head = null;
     private $_tail = null;
 
-    public function insert(&$item){
+    public function insert($item){
         if ($this->_head == null){
             $this->_head = $item;
             $this->_tail = $item;
         }else{
-            $this->_tail->setNext(&$item);
+            $this->_tail->setNext($item);
             $this->_tail = &$item;
         }
     }
