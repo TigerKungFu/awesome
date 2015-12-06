@@ -32,7 +32,7 @@ class Stack{
     protected $_top = null;
 
     public function push($data){
-        $item = new Item($data, null);
+        $item = new QueueItem($data, null);
         if ($this->_top == null){
             $this->_top = $item;
         }else{

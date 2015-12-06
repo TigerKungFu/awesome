@@ -5,7 +5,7 @@
  * Date: 12/6/15
  * Time: 1:56 AM
  */
-class Item{
+class QueueItem{
     public $data = null;
     public $next = null;
     public $prev = null;
@@ -20,7 +20,7 @@ class Queue{
     protected $_tail = null;
 
     public function insert($data){
-        $item = new Item($data);
+        $item = new QueueItem($data);
 
         if ($this->_head == null){
             $this->_head = $item;
@@ -32,10 +32,9 @@ class Queue{
         }
     }
     public function delete(){
-        if ($this->_tail){
+        if ($this->_tail != null){
             $item = $this->_tail;
             $this->_tail = $this->_tail->prev;
-            $this->_tail->next = null;
             $data = $item->data;
             $item = null;
             if ($this->_tail == null){

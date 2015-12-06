@@ -14,10 +14,9 @@ $q->insert(445);
 $q->insert("ccc");
 echo $q;
 
-$q->delete();
-echo $q;
+echo $q->delete();
 
-$q->delete();
-$q->delete();
+echo $q->delete();
+echo $q->delete();
 echo $q;
 ?>

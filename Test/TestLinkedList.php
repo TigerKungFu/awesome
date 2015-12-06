@@ -10,7 +10,7 @@ require_once __DIR__ . "/../DataStructure/LinkedList.php";
 $num = 1000;
 $ll = new LinkedList();
 for ($i = 1; $i<= $num; $i++){
-    $ll->insert(new Item($i));
+    $ll->insert(new QueueItem($i));
 }
 echo $ll;
 ?>
