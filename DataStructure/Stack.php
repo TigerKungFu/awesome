@@ -5,7 +5,7 @@
  * Date: 12/6/15
  * Time: 12:56 AM
  */
-class Item{
+class StackItem{
     protected $_date = null;
     protected $_next = null;
 
@@ -32,7 +32,7 @@ class Stack{
     protected $_top = null;
 
     public function push($data){
-        $item = new QueueItem($data, null);
+        $item = new StackItem($data, null);
         if ($this->_top == null){
             $this->_top = $item;
         }else{

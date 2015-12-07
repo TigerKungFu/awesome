@@ -39,6 +39,8 @@ class Queue{
             $item = null;
             if ($this->_tail == null){
                 $this->_head = null;
+            }else{
+                $this->_tail->next = null;
             }
             return $data;
         }

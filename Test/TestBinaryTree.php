@@ -7,12 +7,12 @@
  */
 require_once __DIR__ . "/../DataStructure/BinaryTree.php";
 
-$n1 = new Node(123);
-$n2 = new Node(12);
-$n3 = new Node(32);
-$n4 = new Node(453);
-$n5 = new Node(1);
-$n6 = new Node(90);
+$n1 = new BinaryNode(123);
+$n2 = new BinaryNode(12);
+$n3 = new BinaryNode(32);
+$n4 = new BinaryNode(453);
+$n5 = new BinaryNode(1);
+$n6 = new BinaryNode(90);
 
 $bt = new BinaryTree();
 $bt->insert($n1);

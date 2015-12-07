@@ -15,6 +15,6 @@ $s->push(true);
 echo $s;
 
 $s->pop();
-echo $s->top() . "\n";
+echo "top:" . $s->top() . "\n";
 $s->pop();
 echo $s;

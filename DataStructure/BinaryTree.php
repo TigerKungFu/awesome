@@ -7,7 +7,7 @@
  */
 require_once __DIR__ . "/../DataStructure/Queue.php";
 
-class Node{
+class BinaryNode{
     public $parent = null;
     public $left = null;
     public $right = null;
@@ -44,7 +44,7 @@ class BinaryTree{
             }
         }
     }
-    protected function _search($target, $root){
+    protected function _search($target, &$root){
         if ($target == $root){
             return 1;
         }

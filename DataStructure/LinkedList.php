@@ -5,7 +5,7 @@
  * Date: 12/3/15
  * Time: 12:43 AM
  */
-class Item{
+class LinkedItem{
     protected $_key = '';
     protected $_next = null;
 
