@@ -1,6 +1,6 @@
 <?php
 /**
- * Binary Tree.
+ * Binary Search Tree, left < root < right.
  * User: zhouxiuhu
  * Date: 12/6/15
  * Time: 2:50 PM

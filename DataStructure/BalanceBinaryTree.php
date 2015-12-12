@@ -1,6 +1,6 @@
 <?php
 /**
- * Balance Binary Tree.
+ * Balance Binary Search Tree.
  * User: zhouxiuhu
  * Date: 12/7/15
  * Time: 12:12 AM
@@ -172,6 +172,38 @@ class BalanceBinaryTree{
         }
         return $this->_leftRightRoot($root->left, $level + 1) . " " . $this->_leftRightRoot($root->right, $level + 1) .
             " " . $root . "($level) ";
+    }
+
+    /**
+     * 查找第一个共同祖先
+     * @param $node1
+     * @param $node2
+     * @param $root
+     * @return bool
+     */
+    public function _findCommonAncestor($node1, $node2, $root){
+        if ($root == null){
+            return false;
+        }
+
+        if ($node2->key < $root->key){ //left of root
+            return $this->_findCommonAncestor($node1, $node2, $root->left);
+        }else if ($node1->key > $root->key){ //right of root
+            return $this->_findCommonAncestor($node1, $node2, $root->right);
+        }else {
+            return $root;
+        }
+    }
+    public function findCommonAncestor($node1, $node2){
+        if ($node1 == null || $node2 == null){
+            return false;
+        }
+        if ($node1->key > $node2->key){
+            $tmp = $node1;
+            $node1 = $node2;
+            $node2 = $tmp;
+        }
+        return $this->_findCommonAncestor($node1, $node2, $this->_root);
     }
     public function __toString(){
         return "Left Root Right: " . $this->_leftRootRight($this->_root, 1) . "\n" .
