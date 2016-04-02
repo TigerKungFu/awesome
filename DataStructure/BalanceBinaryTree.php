@@ -115,6 +115,11 @@ class BalanceBinaryTree{
         return array_merge($this->_sort($root->left), array(array("key"=>$root->key, "data"=>$root->data)),
             $this->_sort($root->right));
     }
+
+    /**
+     * @param $list
+     * 不断取中间节点，插入到新开辟的二叉树中
+     */
     public function _balance($list){
         if (empty($list)){
             return;
@@ -180,6 +185,7 @@ class BalanceBinaryTree{
      * @param $node2
      * @param $root
      * @return bool
+     * @Description 根据二叉树的特性，第一个共同祖先即找到一个节点，大于node1，小于node2，node1<node2
      */
     public function _findCommonAncestor($node1, $node2, $root){
         if ($root == null){

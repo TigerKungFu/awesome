@@ -4,6 +4,7 @@
  * User: zhouxiuhu
  * Date: 12/9/15
  * Time: 10:57 AM
+ * Description: Each child has a key & value
  */
 class TreeNode{
     public $key = null;
@@ -47,6 +48,14 @@ class Tree{
     public function searchByKey($key){
         return $this->_searchByKey($key, $this->_root);
     }
+
+    /**
+     * 前提是key必须是唯一的
+     * @param $key
+     * @param $root
+     * @param $path
+     * @return bool
+     */
     public function _findPath($key, $root, &$path){
         if ($root == null){
             return false;
@@ -64,10 +73,20 @@ class Tree{
             }
         }
     }
+
+    /**
+     * @param $key
+     * @param $path 引用参数，加&
+     */
     public function findPath($key, &$path){
         $this->_findPath($key, $this->_root, $path);
     }
 
+    /**
+     * 先根遍历普通树
+     * @param $root
+     * @return string
+     */
     public function _rootFirst($root){
         if ($root == null){
             return '';
@@ -81,6 +100,7 @@ class Tree{
     }
     /**
      * 查找最近祖先
+     * 先计算两个节点的路径，根据路径来查找
      */
     public function findCommonAncestor($node1, $node2){
         $common = null;

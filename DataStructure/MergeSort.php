@@ -17,6 +17,7 @@ class MergeSort{
         $left = $this->sortRecursive($left);
         $right = $this->sortRecursive($right);
 
+        //每次递归merge完都是有序的array
         return $this->_merge($left, $right);
     }
     protected function _merge($left, $right){
@@ -29,6 +30,7 @@ class MergeSort{
                 array_push($result, array_shift($right));
             }
         }
+        //将left和right加到结尾
         array_splice($result, count($result), 0, $left);
         array_splice($result, count($result), 0, $right);
 

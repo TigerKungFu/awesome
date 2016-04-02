@@ -4,6 +4,7 @@
  * User: zhouxiuhu
  * Date: 12/6/15
  * Time: 1:56 AM
+ * Description: First In First Out, actually, array can be Queue in php
  */
 class QueueItem{
     public $data = null;

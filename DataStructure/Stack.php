@@ -4,6 +4,7 @@
  * User: zhouxiuhu
  * Date: 12/6/15
  * Time: 12:56 AM
+ * Description: First In Last Out, Actually, array can be stack in php
  */
 class StackItem{
     protected $_date = null;

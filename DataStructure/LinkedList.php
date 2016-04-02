@@ -4,6 +4,7 @@
  * User: zhouxiuhu
  * Date: 12/3/15
  * Time: 12:43 AM
+ * Description: |head|->node1->node2->node3->node4|tail|->null;
  */
 class LinkedItem{
     protected $_key = '';

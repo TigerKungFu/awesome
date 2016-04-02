@@ -5,6 +5,7 @@
  * User: zhouxiuhu
  * Date: 12/12/15
  * Time: 12:08 PM
+ * Description: 8 3 5 4 => 3 8 5 4 => 3 5 8 4 => 3 4 5 8
  */
 class InsertionSort{
     public function sort($arr){

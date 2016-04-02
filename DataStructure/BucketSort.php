@@ -5,6 +5,7 @@
  * User: zhouxiuhu
  * Date: 12/12/15
  * Time: 5:18 PM
+ * Description: 适合数值较小的排序，浪费空间
  */
 class BucketSort{
     public function sort($arr){
